@@ -7,6 +7,7 @@ package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * A concrete class that represents any grouping of cards for a Game.
@@ -18,7 +19,7 @@ public class GroupOfCards
 {
    
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
+    private Card cards;
     private int size;//the size of the grouping
     
     public GroupOfCards(int givenSize)
@@ -30,14 +31,14 @@ public class GroupOfCards
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
      */
-    public ArrayList<Card> showCards()
+    public Card showCards()
     {
         return cards;
     }
     
     public void shuffle()
     {
-        Collections.shuffle(cards);
+        Collections.shuffle((List<?>) cards);
     }
 
     /**
